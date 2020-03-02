@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+<link rel="stylesheet" href="css/ttvh.css">
+<script src="js/ttvh.js"></script>
+</head>
+<body>
+
+
+<header class="header" id ="headerTTVH">
+        <div class="menu">
+                <a href="index.html"  target="ifTTVH" class="title">&nbsp;&nbsp;&nbsp;&nbsp;Thể thao & Văn hóa</a>
+              <div id="menuItem">
+                  <a href="login.php" onclick ="menuTTVHclose();" target="ifTTVH"><i class="fas fa-user-circle iconAccount"></i>Đăng nhập</a>
+                  
+                  <hr  noshade="noshade" />
+                  <a href="viet.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('viet.html','Bóng đá Việt Nam');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Bóng đá Việt Nam</a>
+                  <a href="anh.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('anh.html','Bóng đá quốc tế');"   ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Bóng đá quốc tế</a>
+                  <a href="soikeo.php" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('soikeo.php','Soi kèo');"  ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Soi kèo</a>
+                  <hr  noshade="noshade" />
+                  <a href="giaitri.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('giaitri.html','Giải trí');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Giải trí</a>
+                  <a href="vanhoa.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('vanhoa.html','Văn hóa');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Văn hóa</a>
+                  <a href="xahoi.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('xahoi.html','Xã hội');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Xã hội</a>
+                  <a href="sao.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('sao.html','Thế giới sao');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Thế giới sao</a>
+                  <hr />
+                  <a href="video.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('video.html','Video');" ><i class="fas fa-video iconItem"></i>&nbsp;&nbsp;Video clip</a>
+                  <a href="youtube.html" target="ifTTVH" ><i class="fab fa-youtube iconItem"></i>&nbsp;&nbsp;Kênh TT&VH</a>
+                  <!-- <a href="" target="ifTTVH" onclick="menuTTVHclose();" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Đánh giá</a>  -->
+                  <!--<a href="" target="ifTTVH" onclick="menuTTVHclose();" ><i class="fas fa-comment-alt iconItem"></i>&nbsp;&nbsp;Góp ý</a>-->
+                  <a href="quangcao.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('quangcao.html','Test Quảng cáo');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Test Quảng cáo</a>
+                  <a href="adsvanhoa.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('adsvanhoa.html','QC Chuyên mục');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;QC Chuyên mục</a>
+                  <a href="adsview.html?id=9876543210" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('adsview.html?id=9876543210','QC Tin bài');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;QC Tin bàic</a>
+                  <!--a href="test.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('test.html','Test');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Test</a-->
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="menuTTVH()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+</header>        
+<nav class="topnav" id="navTTVH">
+        <div class="list">
+                <a href="index.html"  onclick = "navTTVH(this);" target="ifTTVH" class="navItemActive" id="Nav1" >Bài mới</a>
+                <a href="video.html"  onclick = "navTTVH(this);" target="ifTTVH" id="Nav2" class="navItem"  >Video</a>
+                <a href="youtube.html" onclick = "navTTVH(this);" target="ifTTVH" id="Nav3" class="navItem"  >Kênh TT&VH</a>
+            </div>    
+        
+        <div class="line"></div>       
+</nav>
+<section class="section">
+  <style>iframe { height: max-content; }</style>
+
+<iframe src="index.html?cachebust=2" allowfullscreen style="border:none;width:100%;min-height:300px;overflow: hidden;" scrolling="no"
+        sandbox="allow-same-origin allow-scripts allow-forms allow-modals allow-popups allow-top-navigation"
+        allowtransparency="true"
+        onload="this.style.height=this.contentDocument.body.scrollHeight +'px';  window.setInterval('autoresize_frames()', 1000); "
+        onchange="this.style.height=this.contentDocument.body.scrollHeight +'px';"
+      
+        name="ifTTVH"
+        id="ifTTVH"
+>
+    
+</iframe>
+</section>
+
+
+      
+<footer class="footer" id="footerTTVH">
+        BÁO ĐIỆN TỬ THỂ THAO & VĂN HÓA - TTXVN
+        Tổng Biên tập:	Lê Xuân Thành
+               
+        Liên hệ quảng cáo: 04.38254756. 
+        HOTLINE Miền Bắc: 0981.119.189; 
+        Miền Trung: 0981.118.618; 
+        Miền Nam: 0981.116.818
+</footer>
+<script>
+  function autoresize_frames() {
+    var frm =document.getElementById("ifTTVH");
+    frm.style.height=(frm.contentDocument.body.scrollHeight+10) +'px';
+    //alert("hello");
+
+  }
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("headerTTVH");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+
+        </script>
+
+</body>
+</html>
+
+
+
+
+
+

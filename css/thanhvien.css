@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+.header {
+    margin: auto;
+    background-color: #A00000;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+.menu {
+    text-align: center;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.icon i {
+    float: right;
+    padding: 2px 20px 0 0;
+
+}
+.title{
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#aselist table tr td{
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #A00000;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#aselist table a{
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+}
+#aselist table {
+    width: 100%;
+    margin: 10px auto;
+    border-top: 1px solid #A00000;
+    /* border-collapse: collapse;
+    border-spacing: 0; */
+}
+.icon i{
+    float: right;
+    padding: 2px 15px 0 0;   
+}
+ table tr td .icon-1{
+  border:1px solid;
+  border-radius: 50%;
+  padding: 4px;
+  color: white;
+  background: #a00000;
+}
+.more{
+  float: right;
+  margin-right: 10px;
+}
+.more i{
+  border: none;
+  padding: 4px;
+  opacity: 0.6;
+}
+  .user a{
+      text-decoration: none;
+      color: black;
+    margin: 25px 10px 10px 10px;
+    float: right;
+    font-size: 15px;
+    opacity: 0.6;
+}
+.back {
+    bottom: 20px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+    top: 0;
+}
+
+.back button {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px;
+    /* background: #ee0000; */
+    color: white;
+    font-size: 14px;
+    background: #a00000;
+    /* outline: 0; */
+}

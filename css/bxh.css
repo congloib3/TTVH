@@ -1,0 +1,100 @@
+body{
+    margin: 0 auto;
+    max-width: 100%;
+}
+.header{
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+.content{
+    background: #a00000;
+}
+.title{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.logo img{
+    background-size: cover;
+    height:60px;
+    float:left
+  }
+table{  
+    text-align:center;
+     width: 90%;
+     margin: 10px auto;
+     border-collapse: separate;
+     border-spacing: 0;
+     border:1px solid white;
+     border-radius: 10px;
+}
+.rank-detail{
+    padding-top: 10px;
+}
+.rank-detail table tbody tr:nth-child(even) {
+    background-color: #6d1616
+  }
+table tbody tr td{
+    color: white;
+    padding:5px;
+    /* border: 1px solid white; */
+}
+table thead tr td{
+    color: #a00000;
+    background: white;
+    border-bottom: 1px solid white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+table tbody tr td button{
+    border-radius: 5px;
+    padding: 5px;
+    
+    color: white;
+    background-color: transparent; 
+    outline: 0;
+    border: none;
+}
+.user-info{
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+.user-info table tr td{
+    /* border:1px solid white; */
+    padding: 5px;
+    border-bottom: 1px solid white;
+}
+.user-name{
+    padding-bottom: 5px;
+}
+.user-point{
+    padding-bottom: 5px;
+}
+.user-rank{
+    padding-bottom: 5px;
+}
+.back{
+    bottom: 10px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+}
+.back button{
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+    /* background: #ee0000; */
+    color:white;
+    background:linear-gradient(to right, #a00000, darkblue, purple); 
+    /* outline: 0; */
+    margin-left: 20px;
+}
+

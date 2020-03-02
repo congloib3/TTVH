@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Th? thao & Van hóa">
+  <meta name="keywords" content="Th? thao,Van hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/ttvh.css">
+
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+  
+  <section class="section" id="video">
+    <table>
+      <tbody v-for="(x, index) in list" :key="x.id">
+        <tr>
+          <td style="max-width:30%"> <a :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a> </td>
+          <td><a :href="'view.html?id='+x.id">
+              <div class="tieude">{{x.tieude}}</div>
+              <div class="ngay">{{x.ngay}}</div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a :href="'view.html?id='+x.id">
+              <div class="mota"> {{x.mota}} </div>
+              <br />
+            </a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <script src="js/video.js"></script>
+  <script src="js/ttvh.js"></script>
+</body>
+
+</html>

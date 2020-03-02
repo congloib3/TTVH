@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+    <link rel="stylesheet" href="css/lichsu.css">
+
+    <script src="js/ttvh.js"></script>
+    <script src="jslib/vue.js"></script>
+    <script src="jslib/vue-resource.min.js"></script>
+    <script src="jslib/axios.min.js"></script>
+    <script src="jslib/ase.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="Msg" class="Msg"></div>
+    <div id="Err" class="Err"></div>
+    <style>
+        #aselist table {
+            width: 100%;
+        }
+
+        #aselist table tbody {
+            color: navy;
+        }
+    </style>
+    <section class="section" id="aselist">
+        <!-- <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="./img/unnamed.jpg" width="30%" alt=""></a>
+                <img src="./img/logo-bigbet-final.png" width="70%" alt="">
+            </div>
+        </div> -->
+
+        <div class="content">
+            <div class="title">
+                LỊCH SỬ NGƯỜI CHƠI
+            </div>
+            <div class="acticle" v-for="(history, index) in historys" :key="history.id">
+                <div class="match-info">
+                    <div class="match">Trận: {{history.match}}</div>
+                    <div class="time">(Ngày: {{history.time}})</div>
+                </div>
+                <table class="dudoan">
+                    <thead>
+                        <tr style="background: white;">
+                            <td style="width: 20%;border-top-left-radius: 8px;">Tỉ số</td>
+                            <td style="width: 20%">Điểm cược</td>
+                            <td style="width: 20%;border-top-right-radius: 8px;">Tổng cộng</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr v-for="(info, index) in history.scores">
+                            <td>{{(info.score)}}</td>
+
+                            <td style="width:30%;">
+                                {{info.point}}
+                            </td>
+                            <td :style="[info.total>0?{'color':'#0097e6'}:{'color':'white'}]">
+                                {{(info.total)}}
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="back">
+            <button onclick="goBack()"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Quay lại</button>
+        </div>
+    </section>
+</body>
+<script src="js/lichsu.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</html>

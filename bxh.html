@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+    <link rel="stylesheet" href="css/bxh.css">
+
+    <script src="js/ttvh.js"></script>
+    <script src="jslib/vue.js"></script>
+    <script src="jslib/vue-resource.min.js"></script>
+    <script src="jslib/axios.min.js"></script>
+    <script src="jslib/ase.js"></script>
+
+    <script src="js/moment.js"></script>
+
+
+</head>
+
+<body>
+    <div id="Msg" class="Msg"></div>
+    <div id="Err" class="Err"></div>
+    <style>
+
+    </style>
+    <nav>
+
+    </nav>
+    <section class="section" id="aselist">
+        <!-- <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="./img/unnamed.jpg" width="30%" alt=""></a>
+                <img src="./img/logo-bigbet-final.png" width="70%" alt="">
+            </div>
+        </div> -->
+        <div class="content">
+
+            <div class="rank">
+
+                <div class="title">
+                    BẢNG XẾP HẠNG
+                </div>
+                <div class="rank-detail">
+                    <table>
+                        <thead>
+
+                            <tr>
+                                <td style="width:30%;border-top-left-radius: 8px;">XẾP HẠNG</td>
+                                <td style="width:30%">NGƯỜI CHƠI</td>
+                                <td style="width:40%;border-top-right-radius: 8px;">TỔNG ĐIỂM</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(user, index) in sortedPoint">
+                                <td>{{currentPage <= 1?index+1 :(currentPage <=2?index+currentPage*5+1:index+(currentPage-1)*10+1)}}
+                                </td>
+                                <td>{{user.name}}</td>
+                                <td>{{formatPoint(user.point)}}</td>
+
+                            </tr>
+                            <tr align="right">
+                                <td style="padding:5px; border: none;" colspan="3">
+                                    <button @click="prevPage" v-if="currentPage>1">Trang trước</button>
+                                    <span v-if="currentPage>1">{{currentPage}}...</span>
+                                    <button @click="nextPage">Trang kế</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="user-info">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="user-name">
+                                    Người chơi
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa fa-user" aria-hidden="true"></i> {{userInfo.name}} <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-point">
+                                    Số điểm của bạn
+                                </div>
+                            </td>
+                            <td>
+                                10000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none">
+                                <div class="user-rank">
+                                    Xếp hạng
+                                </div>
+                            </td>
+                            <td style="border:none">
+                                9/{{users.length}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="back">
+                    <button onclick="goBack()"> Quay lại</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/bxh.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</html>

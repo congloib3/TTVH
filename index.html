@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/giaodien.css">
+
+    <script src="jslib/vue.js"></script>
+    <script src="jslib/vue-resource.min.js"></script>
+    <script src="jslib/axios.min.js"></script>
+    <script src="jslib/ase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="headerTTVH">
+            <div class="menu">
+                    <a :href="userInfo.name=='Đăng nhập'?'login1.html':'thanhvien.html'" class="icon" id="icon-star">
+                            <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                    </a>
+                    <a href="index2.html" target="_parent" onclick="menuTTVHlink('baimoi.html','Bài mới');menuTTVHlable('Bài mới');"
+                        class="title">&nbsp;&nbsp;&nbsp;&nbsp;Thể thao & Văn hóa</a>
+                </div>
+    </header>
+    <div id="Msg" class="Msg"></div>
+    <div id="Err" class="Err"></div>
+
+    <section class="section" id="aselist">
+        <div class="menu2">
+            <!-- <table>
+                <tr >
+                    <td style="width: 50%;" ><div style="background: rgb(207, 55, 80)"  class="live"><a href="">TIN THỂ THAO</a></div></td>
+                    <td></td>
+                    <td style="width: 50%;" ><div class="live"><a href="">TIN NÓNG TRONG NGÀY</a></div></td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td style="width: 50%;" class="passion"><div class="live"><a href="">XE PASSION</a></div></td>
+                    <td></td>
+                    <td style="width: 50%;" ><div class="live"><a href="">DU LỊCH</a></div></td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td style="width: 50%;color: #fff;" ><div style="background: rgb(207, 55, 80)" class="live"><a href="">VĂN HÓA</a></div></td>
+                    <td></td>
+                    <td style="width: 50%;" ><div class="live"><a href="">BIG BET</a></div></td>
+                </tr>
+            </table> -->
+            <div class="container">
+                <div class="row" style="margin:20px 0px;
+                        ">
+                    <div class="col-6">
+                        <a href="index2.html" target="_parent" onclick="menuTTVHlink('baimoi.html','Bài mới')">
+                        <div class="circle">
+                            <div class="circle__inner">
+                              <div class="circle__wrapper">
+                                <div class="circle__content newssport"> THỂ THAO</div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="circle">
+                            <div class="circle__inner">
+                              <div class="circle__wrapper">
+                                <div class="circle__content hotnews">TIN NÓNG TRONG NGÀY</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="circle">
+                            <div class="circle__inner">
+                              <div class="circle__wrapper">
+                                <div class="circle__content passion"></div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="circle">
+                            <div class="circle__inner">
+                              <div class="circle__wrapper">
+                                <div class="circle__content dulich"></div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="circle">
+                            <div class="circle__inner">
+                              <div class="circle__wrapper">
+                                <div class="circle__content vanhoa">VĂN HÓA</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <a href="bigbet.html">
+                            <div class="circle">
+                                <div class="circle__inner">
+                                  <div class="circle__wrapper">
+                                    <div class="circle__content bigbet"></div>
+                                  </div>
+                                </div>
+                              </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="js/giaodien.js"></script>
+<script>
+new Vue({
+    el:"#headerTTVH",
+    data:{
+        userInfo: userInfo
+    }
+  })
+</script>
+
+</html>

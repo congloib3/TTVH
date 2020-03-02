@@ -1,0 +1,182 @@
+body{
+    margin: 0 auto;
+    max-width: 100%;
+}
+.header{
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+.content{
+    background: rgb(238, 232, 232);
+    /* background: -webkit-linear-gradient(to right, #c471ed, #f64f59);
+    background: linear-gradient(to right, #c471ed, #f64f59); */
+    overflow: auto;
+}
+#aselist table {
+    width: 100%;
+    color: white;
+    background: rgb(255, 255, 255);
+    border-collapse: separate;
+    border-radius: 5px;
+  }
+
+  #aselist table thead {
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  #aselist table thead td{
+    text-align: center;
+    border-bottom: 1px solid #A00000;
+    padding: 5px;
+  }
+  #aselist table{
+     border-collapse: collapse;
+     border-spacing: 0;
+  }
+  #aselist table thead th {
+    color: white;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+    /* background: linear-gradient(to right,purple,darkblue,#a00000) */
+    background: #A00000;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  #aselist table tbody {
+    color: navy;
+  }
+    #aselist table tbody a{
+        text-decoration: none;
+        color: black;
+    }
+  #aselist table tbody tr td{
+      padding:5px 3px;
+      color: black;
+      text-align: center;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+    #aselist table{
+        margin: 10px;
+        width: 95%;
+        margin: 10px auto;
+    }
+    .logo img{
+      background-size: cover;
+      height:60px;
+      float:left
+    }
+  .icon-bar {
+        /* Full-width */
+    margin-top:-5px;
+    overflow: auto;
+    background: #A00000;
+    float: left;
+    width: 100%;
+    /* background:-webkit-linear-gradient(45deg, darkblue,purple,darkred);    
+    background:linear-gradient(45deg, darkblue,purple,darkred); */
+    /* Dark-grey background */
+    /* Overflow due to float */
+  }
+
+  .icon-bar a {
+    text-decoration: none;
+    float: left;
+    /* Float links side by side */
+    text-align: center;
+    /* Center-align text */
+    width: 33.3%;
+    /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 10px 0;
+    /* Some top and bottom padding */
+    transition: all 0.3s ease;
+    /* Add transition for hover effects */
+    color: white;
+    /* White text color */
+    font-size: 14px;
+    /* Increased font size */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .icon-bar a:hover {
+    background-color: rgb(199, 21, 21);
+    font-weight:bold;
+    text-transform: uppercase;
+    /* Add a hover color */
+  }
+
+  .active {
+   color: black;
+   background-color:rgb(199, 21, 21) ;
+   font-weight:bold;
+   text-transform: uppercase;
+    /* Add an active/current color */
+  }
+
+   .normal {
+     background-color: #A00000;
+    /* Add an active/current color 
+  } 
+  .user{
+      text-align: center;
+        /* padding: 10px 0; */
+        color: black;
+  }
+  .user a{
+    color: white;
+    margin: 15%;
+    text-decoration: none;
+  }
+  .logo-doi1 img{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+  .logo-doi2 img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+  .footer{
+    /* background:-webkit-linear-gradient(45deg, darkblue,purple,darkred);    
+    background:linear-gradient(45deg, darkblue,purple,darkred); */
+    background: #A00000 !important;
+    position: sticky;
+    bottom: -1px;
+    width: 100%;
+    position: -webkit-sticky;
+    text-align: center;
+    padding: 1px 0;
+    color: white;
+}
+.footer table{
+  background: #A00000 !important;
+  margin: 5px auto !important;
+
+}
+.footer button{
+    background-color: transparent; 
+  border: none;
+  outline: 0;
+  color: white;
+  float: left;
+}
+.title{
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+.footer table tr td {
+  color: white !important;
+}
+.footer table tr td  a{
+  color: white !important;
+}

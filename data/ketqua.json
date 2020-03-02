@@ -1,0 +1,94 @@
+﻿{
+    "GhiBan": [
+        {
+            "MaTran": "T1",
+            "HoTen": "Adisak Kraisorn",
+            "ViTri": "Tiền đạo",
+            "SoAo": "9",
+            "KienTao": "",
+            "GhiBan": "3,13,31,45,50,57,90+1",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "87",
+            "VaoSan": ""
+        }
+    ],
+    "TheVang": null,
+    "TheDo": null,
+    "VaoSan": [
+        {
+            "MaTran": "T1",
+            "HoTen": "Chayanan Pombuppha",
+            "ViTri": "Dự bị",
+            "SoAo": "2",
+            "KienTao": "",
+            "GhiBan": "",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "",
+            "VaoSan": "74"
+        },
+        {
+            "MaTran": "T1",
+            "HoTen": "Sumanya Purisai",
+            "ViTri": "Dự bị",
+            "SoAo": "7",
+            "KienTao": "",
+            "GhiBan": "",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "",
+            "VaoSan": "82"
+        },
+        {
+            "MaTran": "T1",
+            "HoTen": "Supachai Jaided",
+            "ViTri": "Dự bị",
+            "SoAo": "22",
+            "KienTao": "",
+            "GhiBan": "",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "",
+            "VaoSan": "87"
+        }
+    ],
+    "RaSan": [
+        {
+            "MaTran": "T1",
+            "HoTen": "Thitipan Puangchan",
+            "ViTri": "Tiền vệ",
+            "SoAo": "8",
+            "KienTao": "",
+            "GhiBan": "",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "82",
+            "VaoSan": ""
+        },
+        {
+            "MaTran": "T1",
+            "HoTen": "Mongkol Tossakrai",
+            "ViTri": "Tiền vệ",
+            "SoAo": "11",
+            "KienTao": "",
+            "GhiBan": "",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "74",
+            "VaoSan": ""
+        },
+        {
+            "MaTran": "T1",
+            "HoTen": "Adisak Kraisorn",
+            "ViTri": "Tiền đạo",
+            "SoAo": "9",
+            "KienTao": "",
+            "GhiBan": "3,13,31,45,50,57,90+1",
+            "TheVang": "",
+            "TheDo": "",
+            "RaSan": "87",
+            "VaoSan": ""
+        }
+    ]
+}

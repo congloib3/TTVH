@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+  <link rel="stylesheet" href="css/ttvh.css">
+
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+  <div class="ads1" id="ads1">
+    <img src='ads/320_50.png' /> <br />
+    <img src='ads/320_100.png' /> <br />
+    <img src='ads/300_250.png' />
+  </div>
+  <section class="section" id="vanhoa">
+    <table class="hot">
+      <tbody v-for="(x, index) in listHot" :key="x.id">
+        <tr>
+          <td style="vertical-align: top;">
+            <a :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a>
+            <a :href="'view.html?id='+x.id">
+              <div class="tieude">{{x.tieude}}</script>
+              </div>
+              <div class="ngay">{{x.ngay}}</div>
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td>
+            <a :href="'view.html?id='+x.id">
+              <div class="mota"> {{x.mota}} </div>
+              <div class="socials-share">
+                <a class="bg-facebook"
+                  :href="'https://www.facebook.com/sharer/sharer.php?u=http://tours.tabalohostel.com/ttvh/view.html?id='+x.id"
+                  target="_blank">
+                  <i class="fas fa-share"></i>
+                </a>
+
+              </div>
+              <br />
+            </a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+    <table>
+      <tbody v-for="(x, index) in list" :key="x.id">
+        <tr>
+          <td style="max-width:40%"> <a :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;"><a :href="'view.html?id='+x.id">
+              <div class="tieude">{{x.tieude}}</script>
+              </div>
+              <div style="width:100%;padding-top:0;">
+                <div class="ngay">{{x.ngay}}</div>
+                <div class="socials-share">
+                  <a class="bg-facebook"
+                    :href="'https://www.facebook.com/sharer/sharer.php?u=http://tours.tabalohostel.com/ttvh/view.html?id='+x.id"
+                    target="_blank">
+                    <i class="fas fa-share"></i>
+                </div>
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+
+            <hr />
+            </div>
+            <br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="ads3" id="ads3">
+    <img src='ads/320_50.png' /> <br />
+    <img src='ads/320_100.png' /> <br />
+    <img src='ads/300_250.png' />
+  </div>
+
+  <script src="js/vanhoa.js"></script>
+  <script src="js/ttvh.js"></script>
+</body>
+
+</html>

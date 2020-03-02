@@ -1,0 +1,186 @@
+html{
+    background: linear-gradient(-50deg,red,transparent);
+}
+body{
+    margin: 0 auto;
+    max-width: 100%;
+    /* color: white; */
+    
+}
+
+.logo img{
+    background-size: cover;
+    height:60px;
+    float:left
+  }
+  .winlose thead tr td {
+    text-align: center;
+    /* color: white; */
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.winlose tbody tr td{
+    /* color: white; */
+    color: black;
+    text-align: center;
+}
+.winlose tbody tr th{
+    /* border-top:1px solid black;
+    border-bottom:1px solid black; */
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    background: #f2f2f2;
+}
+.winlose tfoot tr th{
+    /* border-top:1px solid black;
+    border-bottom:1px solid black; */
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    background: #f2f2f2;
+    color: red;
+}
+.dudoan thead tr td {
+    text-align: center;
+    /* color: white; */
+    text-transform: uppercase;
+    font-size: 13px;
+    border-bottom:1px solid black;
+}
+.dudoan tbody tr td{
+    /* color: white; */
+    color: black;
+    text-align: center;
+    /* border-bottom: 1px solid; */
+}
+.submit{
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.submit button{
+    /* background:rgba(77, 14, 14, 0.5); */
+    border: 1px solid #a00000;
+    background: #a00000;
+    padding: 10px;
+    /* color: white; */
+    color: white;
+    border-radius: 15px;
+    /* box-shadow: 9px 8px 5px 0px rgba(0, 0, 0, 0.75); */
+    box-shadow: 9px 8px 5px 0px rgba(223, 30, 30, 0.75);
+
+}
+.user{
+    /* margin: 15px; */
+    
+    padding: 10px;
+    float: right;
+    font-size: 13px;
+}
+.user a{
+    text-decoration: none;
+    /* color: white; */
+    color: white;
+}
+.league{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.game{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top:10px;
+}
+.back{
+    /* margin: 10px; */
+    /* bottom: 10px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 20px; */
+    float: left;
+}
+.back button{
+    border-radius: 15px;
+    border: none;
+    padding:10px;
+    background: #a00000;
+    color: white;
+    /* color:white; */
+    background-color: transparent; 
+    outline: 0;
+    
+}
+.cuoc{
+    font-size: 16px;
+
+}
+.header{
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin-bottom: 20px;
+    background: #a00000;
+  }
+tbody tr td input[type=number] {
+    /* background: rgb(0, 0, 0); Fallback color */
+    /* background: rgba(77, 14, 14, 0.5); */
+    border: 1px solid black;
+    padding: 10px;
+    /* color: white; */
+    color:black;
+   border-radius: 10px;
+   margin: 5px 0;
+}
+tfoot tr td input[type=number] {
+    /* background: rgb(0, 0, 0); Fallback color */
+    /* background: rgba(77, 14, 14, 0.5); */
+    border: 1px solid black;
+    padding: 10px;
+    /* color: white; */
+    color: black;
+   border-radius: 10px;
+   margin: 5px 0;
+}
+table tfoot tr td{
+    text-align: center;
+    
+}
+table thead tr td{
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+
+}
+/* table tr td{    
+    border:0.01em #fff solid; 
+     border-bottom: 1px solid black;
+} */
+table{
+     max-width: 95%;
+     margin:0 auto;
+     border-collapse: separate;
+     border-spacing: 0;
+     /* border:1px solid black; */
+     border-radius: 10px;
+     margin-bottom: 20px;
+     background: white;
+}
+.dudoan tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+  .dudoan tbody tr:last-of-type td{
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+

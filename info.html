@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+  <link rel="stylesheet" href="">
+
+  <script src="js/ttvh.js"></script>
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+
+
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+  <style>
+    #aselist table {
+      width: 95%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      margin-top: 50px;
+    }
+    table tr td{
+        border-bottom: 1px solid #dfdcd8;
+        padding: 20px 10px;
+    }
+    .header{
+        text-align: center;
+        margin-top: 50px;
+        text-transform: uppercase;
+        color: #a00000;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    .back {
+    bottom: 20px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+    top: 0;
+    margin-top: 70px;
+}
+
+.back button {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px;
+    /* background: #ee0000; */
+    color: white;
+    font-size: 14px;
+    background: #a00000;
+    /* outline: 0; */
+}
+  </style>
+  <section class="section" id="aselist">
+      <div class="header">
+          <h2>Thông tin thành viên</h2>
+      </div>
+   <table v-for=" x in list">
+       <tr>
+           <td>ID Người dùng</td>
+           <td>{{x.id}}</td>
+       </tr>
+       <tr>
+            <td>Họ tên</td>
+            <td>{{x.name}}</td>
+       </tr>
+       <tr>
+            <td>Email</td>
+            <td>{{x.email}}</td>
+       </tr>
+       <tr>
+            <td>Sô điện thoại</td>
+            <td>{{x.tel}}</td>
+       </tr>
+   </table>
+   <div class="back">
+        <button onclick="goBack()"> Quay lại</button>
+    </div>
+  </section>
+</body>
+<script src="js/info.js"></script>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</html>

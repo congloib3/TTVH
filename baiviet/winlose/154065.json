@@ -1,0 +1,24 @@
+[{
+    "id":"154065",
+    "tran":"Việt Nam - Thái Lan",
+    "winlose":[
+        {"dt":"Việt Nam","dd":"Thái Lan","idkeo":127,"chap":"","wl":[
+            {"kq":"Việt Nam","tyle":0.98,"cuoc":0,"tong":0},
+            {"kq":"Thái Lan","tyle":0.97,"cuoc":0,"tong":0}
+        ]},
+        {"dt":"Việt Nam","dd":"Thái Lan","idkeo":128,"chap":0.5,"wl":[
+            {"kq":"Việt Nam","tyle":1.5,"cuoc":0,"tong":0},
+            {"kq":"Thái Lan","tyle":0.96,"cuoc":0,"tong":0}
+        ]}
+    ],
+    "kqhoa":"Hòa",
+    "tylehoa":0.85,
+    "cuochoa":0,
+    "tonghoa":0,
+    "tranDauId":"154065",
+    "logo1":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/viet_nam.png",
+    "logo2":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/thai_lan_png.jpg"
+}
+]
+    
+       

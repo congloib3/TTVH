@@ -1,0 +1,63 @@
+<!-- <?php include 'lib/login_lib.php';?>              
+<?php if($rsLogin!=0) 
+{
+?> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="css/register.css">
+  
+
+</head>
+<style>
+
+</style>
+<script src="jslib/vue.js"></script>
+<script src="jslib/vue-resource.min.js"></script>
+<script src="jslib/axios.min.js"></script>
+<script src="jslib/ase.js"></script>
+
+<body>
+    <div class="header">
+        <span><button onclick="goBack()"><i class="fa fa-angle-left" aria-hidden="true"></i></button></span>
+        <span style="margin-right: 25px;">Đăng ký</span>
+      </div>
+    <div id ="Msg" class="Msg"></div>
+    <div id ="Err" class="Err"></div>
+  <div class="signup-form">
+        <div class="signup-form" id="aseSingup">
+          <form >
+            <h1>Đăng ký</h1>
+            <input type="text" placeholder="Tài khoản" class="txtb" v-model="userReges.userName"  required/>
+            <input type="password" placeholder="Mật khẩu" class="txtb" v-model="userReges.password" required/>
+            <input type="text" placeholder="Tên" class="txtb" v-model="userReges.name" required/>
+            <input type="email" placeholder="Email" class="txtb" v-model="userReges.email" required/>
+            <input type="number" placeholder="Số điện thoại" class="txtb" v-model="userReges.tel" required/>
+            <input type="submit" value="Tạo tài khoản" class="signup-btn" @click="doSignup">
+            <div class="input-login">
+              Bạn đã có tài khoản ? <a href="login.html">Đăng nhập</a>
+            </div>
+          </form>
+        </div>
+            
+          </div>
+      
+  </div>
+
+  <script>
+        function goBack() {
+  window.history.back();
+}
+  </script>
+  <script src="js/register.js"></script>
+</body>
+
+</html>

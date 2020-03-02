@@ -1,0 +1,198 @@
+/*----bài viet----------------------------------------------------------------------------------*/
+#menuitem-detail{
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: #00000080; /* Black background with 0.5 opacity */
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  overflow: hidden;
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+}
+#menuitem{
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 57%;
+  height: 80%;
+  transition: .5s ease;
+  display: none;
+  text-align: right;
+}
+#menuitem a{
+  float: right;
+  color: white;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  font-size: 14pt;
+  padding:5px 20px 8px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+#menu1{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  text-align: center;
+  bottom: 10%;
+  right:  10%;
+  position: fixed;
+  display: none;
+  z-index: 2;
+}
+#menu{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  text-align: center;
+  bottom: 10%;
+  right:  10%;
+  position: fixed;
+  display: block;
+  z-index: 2;
+}
+#footer {
+  height: 43px;
+  background: #f4f4f4;
+  position: sticky;
+  position: -webkit-sticky;
+   left: 0;
+   bottom: -1px;
+   width: 100%;
+}
+#footer button{
+  background-color: transparent; 
+  border: none;
+  outline: 0;
+}
+#footer td i{
+  font-size: 14pt;
+  color: black;
+  opacity: 0.7;
+}
+.search-top{
+	width: 85%;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+  padding: 2px 10px;
+  float: left;}
+#footer input[type=text]{
+	border: none;
+	outline: 0; 
+	cursor: text;
+	width: 100%;
+}
+
+body{
+    max-width: auto;
+    margin:0;
+}
+
+.article
+{
+    color: black;
+    background: white;
+    text-align: justify;
+}
+.article .tieude
+{
+  color: black;
+  font-weight: bold;
+  vertical-align: top;
+  padding: 0 5px;
+}
+.article .mota 
+{
+  color: black;
+  font-weight: normal;
+  padding: 0 5px;
+}
+
+.article .noidung 
+{
+  color: black;
+  font-weight: normal;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+.article .noidung img{
+  max-width: 100%;
+}
+.article hr {
+    display: block;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-style: inset;
+    border-width: 0.5px;
+    border-color: #DDD;
+    padding: 0 5px;
+  }
+.ngay{
+    padding:5px 0 0 5px;
+    font-size: 10pt;
+    
+}
+ 
+#navbar {
+    background-color: #f8f7f5;
+    position: fixed;
+    top: -50px;
+    max-width: 100%;
+    display: block;
+    transition: top 0.3s;
+    color: black;
+    padding: 8px;
+    box-sizing: border-box;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
+    margin-right:10px;
+  }
+/*----Share----------------------------------------------------------------------------------*/
+.socials-share {
+  text-align: center;
+  /*margin-bottom: 5px;*/
+  top : 0;
+  float : right;
+  padding-top: 0;
+  padding-right: 10px;
+  display: block;
+  border: 0px solid red;
+}
+
+.socials-share a {
+  color: #777; /*blue #fff*/;
+  text-decoration: none;
+  border-radius: 0px;
+  white-space: nowrap;
+  font-weight: normal;
+  
+  font-size: 20px;
+  top : 0px;
+}
+
+.socials-share span.fa {
+  margin-right: 3px;
+}
+/*----Msg & Err----------------------------------------------------------------------------------*/
+
+.Msg{
+  color: navy;
+  font-weight: bold;
+}
+.Err{
+  color: red;
+  font-weight: bold;
+}
+/*--------------------------------------------------------------------------------------*/

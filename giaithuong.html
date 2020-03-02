@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giải thưởng</title>
+    <script src="jslib/vue.js"></script>
+    <script src="jslib/vue-resource.min.js"></script>
+    <script src="jslib/axios.min.js"></script>
+    <script src="jslib/ase.js"></script>
+</head>
+<style>
+    body {
+        background: #f4f4f4;
+        position: relative;
+
+    }
+
+    .title h3 {
+        color: #a00000;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .content {
+        padding: 5px;
+        line-height: 25px;
+    }
+
+    .content img {
+        background-size: cover;
+        width: 60%;
+        padding: 10px;
+        float: left;
+    }
+
+    .back {
+        bottom: 10px;
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        text-align: center;
+        bottom: 20px;
+        left: 0;
+    }
+
+    .back button {
+        border-radius: 5px;
+        border: 1px solid white;
+        padding: 10px;
+        /* background: #ee0000; */
+        color: white;
+        font-size: 15px;
+        background: #a00000;
+        /* outline: 0; */
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h3>PHẦN THƯỞNG TỪ DỰ ĐOÁN</h3>
+    </div>
+    <div class="content">
+        <strong>Cơ cấu giải thưởng của BigBet</strong><br>
+        <!-- <em>1. Giải tuần</em><br>
+        <em>Giải thưởng tuần: Bao gồm 05 giải dành cho 05 người có số điểm cao nhất trong tuần.</em><br> -->
+        <table>
+            <tbody v-for="gift in gifts">
+                <tr>
+                    <td colspan="2">
+                        <em>{{gift.tuan}}</em>
+                    </td>
+                </tr>
+                <tr v-for="x in gift.xhtuan">
+                    <td style="width: 30%">
+                        <img :src="x.img" alt="">
+                    </td style="width: 70%">
+                    <td>
+                        {{x.sl}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <em>{{gift.thang}}</em>
+                    </td>
+                </tr>
+                <tr v-for="x in gift.xhthang">
+                    <td style="width: 30%">
+                        <img :src="x.img" alt="">
+                    </td style="width: 70%">
+                    <td>
+                        {{x.sl}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <em>{{gift.end}}</em>
+                    </td>
+                </tr>
+                <tr v-for="x in gift.xhcuoi">
+                    <td style="width: 30%">
+                        <img :src="x.img" alt="">
+                    </td style="width: 70%">
+                    <td>
+                        {{x.sl}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="back">
+            <button onclick="goBack()"> Quay lại</button>
+        </div>
+</body>
+<script>
+    new Vue({
+        el: ".content",
+        data: {
+            gifts: []
+        },
+        created: function () {
+            this.getHistory("giaithuong.json");
+        },
+        methods: {
+            getHistory: function (param) {
+                this.$http.get(aseUrl.list + param)
+                    .then(response => {
+                        //this.list = response.data.Data;
+                        this.gifts = response.data;
+                    })
+            },
+        },
+    })
+    function goBack() {
+            window.history.back();
+        }
+</script>
+
+</html>

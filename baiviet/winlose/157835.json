@@ -1,0 +1,24 @@
+[{
+    "id":"157835",
+    "tran":"Việt Nam - Lào",
+    "winlose":[
+        {"dt":"Việt Nam","dd":"Lào","idkeo":127,"chap":"4.0","wl":[
+            {"kq":"Việt Nam","tyle":1.5,"cuoc":0,"tong":0},
+            {"kq":"Lào","tyle":0.87,"cuoc":0,"tong":0}
+        ]},
+        {"dt":"Việt Nam","dd":"Lào","idkeo":128,"chap":1.0,"wl":[
+            {"kq":"Việt Nam","tyle":2,"cuoc":0,"tong":0},
+            {"kq":"Lào","tyle":0.93,"cuoc":0,"tong":0}
+        ]}
+    ],
+    "kqhoa":"Hòa",
+    "tylehoa":0.92,
+    "cuochoa":0,
+    "tonghoa":0,
+    "tranDauId":"157835",
+    "logo1":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/viet_nam.png",
+    "logo2":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/laos.png"
+}
+]
+    
+          

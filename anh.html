@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Th? thao & Van h�a">
+  <meta name="keywords" content="Th? thao,Van h�a">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+  <link rel="stylesheet" href="css/ttvh.css">
+
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+
+<section class="section" id="aselist">
+  <table class="hot">
+    <tbody v-for="(x, index) in listHot" :key="x.id">
+    
+    <tr>
+      
+      <td style="vertical-align: top;">
+          <a target="_parent" :href = "'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a>
+          
+        <a target="_parent" :href = "'view.html?id='+x.id"> 
+           
+          <div class="tieude">{{x.tieude}}</script></div>
+          <!-- <div class="ngay">{{x.cat1.toUpperCase()}}</div> -->
+          
+        </div>
+        </a></td>
+    </tr>
+    <tr>
+        <td>
+         <a target="_parent" :href = "'view.html?id='+x.id"> 
+           <div class="mota"> {{x.mota}} </div>
+           
+         </a></td>
+     </tr>  
+     <tr>
+      <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+      </td>
+  </tr>
+    </tbody>	
+  </table>    
+
+<table>
+<tbody  class="content"  v-for="(x, index) in list" :key="x.id">       
+    <tr >
+        <td colspan="2" style="width:100%;color: black;">
+          <a target="_parent" :href = "'view.html?id='+x.id">
+ <!-- <h3 style="margin:5px;color: black;text-decoration: none;">{{x.tieude}}</h3> -->
+<a>
+        </td>
+    </tr>
+  <tr style="height:67.5px;"  >         
+    <td  style="max-width:40%;vertical-align: top;"> <a target="_parent" :href = "'view.html?id='+x.id"> <img :src ="x.img" alt="x.alt" /> </a> </td>
+    <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href = "'view.html?id='+x.id"> 
+        <div class="motadetail">{{x.tieude}}</div>
+        <div   class="socials-share">
+            <span class="cat">{{x.cat1.toUpperCase()}}</span>
+            <span  class="ngay">{{x.ngay}}</span>    
+        </div>     
+      </a></td>
+  </tr>
+  <tr>
+      <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+      </td>
+  </tr>
+  </tbody>
+</table>
+
+  </section>
+
+  <script src="js/ttvh.js"></script>
+  <script src="js/anh.js"></script>
+</body>
+
+</html>

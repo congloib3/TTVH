@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<div style="height:300px; width:100%; background-color:red"></div>
+
+<script>
+
+// Since there are 2 iframes in the page, we must pass an ID for the current iframe
+setInterval(function() {
+    window.top.postMessage(document.body.scrollHeight + '-' + 'iframe2', "*");
+}, 500);
+
+</script>
+
+</body>
+</html>

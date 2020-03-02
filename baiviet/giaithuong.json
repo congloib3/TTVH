@@ -1,0 +1,48 @@
+[
+    {
+        "tuan": " 1. Giải tuần",
+        "xhtuan": [
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/7077/194536/apple-watch-s3-gps-42mm-vien-nhom-day-cao-su-den-nt-400x400.jpg",
+                "sl": "01 giải nhất:  Apple Watch S3 GPS 42mm viền nhôm xám dây cao su màu đen MTF32VN/A."
+            },
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/54/207520/tai-nghe-chup-bluetooth-jbl-tune-t600btncblk-den-1-600x600-1-600x600.jpg",
+                "sl": "02 giải nhì:  Tai nghe chụp tai Bluetooth JBL Tune T600BTNCBLK."
+            },
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/382/197860/loa-bluetooth-icutes-mb-m916-cu-den-add-600x600-1-600x600.jpg",
+                "sl": "2 giải ba: Loa Bluetooth iCutes MB-M916 Cú Đen."
+            }
+        ],
+        "thang": " 2. Giải tháng",
+        "xhthang": [
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/42/190322/iphone-xs-max-256gb-white-400x460.png",
+                "sl": "01 giải nhất:  Điện thoại iPhone Xs Max 256GB."
+            },
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/42/201228/samsung-galaxy-a80-gold-400x460.png",
+                "sl": "02 giải nhì:  Điện thoại Samsung Galaxy A80."
+            },
+            {
+                "img": "https://cdn.tgdd.vn/Products/Images/7264/207418/orient-fet0p001w0-nam-avatar-1-600x600.jpg",
+                "sl": "2 giải ba: Đồng hồ Nam Orient FET0P001W0 - Cơ tự động."
+            }
+        ],
+        "end": " 3. Giải chung cuộc", "xhcuoi": [
+            {
+                "img": "https://www.honda.com.vn/asserts/images/honda-motor/motor-detail/sh-300cc/style/thethao_xamden_image.png",
+                "sl": "01 giải nhất:  SH-300CC."
+            },
+            {
+                "img": "https://lienbangtravel.com/uploads/tour/1551251653_290_maldives-by-air.jpg",
+                "sl": "01 giải nhì: Chuyến du lịch đến thiên đường hạ giới Maldives."
+            },
+            {
+                "img": "https://www.honda.com.vn/asserts/images/honda-motor/motor-detail/air-blade-125cc/style/tieuchuan_trangdoden_image.png",
+                "sl": "2 giải ba: AIR BLADE 125CC."
+            }
+        ]
+    }
+]

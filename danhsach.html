@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+<link rel="stylesheet" href="css/ttvh.css">
+
+<script src="js/ttvh.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="danhsach.js"></script>    
+
+</head>
+<body>
+<div id ="Msg" class="Msg"></div>
+<div id ="Err" class="Err"></div>
+
+<section class="section" ng-app="TTVHApp" ng-controller="TTVHCtrl">
+    Danh sách ra sân
+    <table style="width:100%;" >
+        <tbody ng-repeat="x in danhsach">
+        <tr>
+          <td style="vertical-align: top;width:100%;"><a href = "danhsach.html?id={{x.id}}"> 
+              <div class="tieude"> {{x.HoTen}} - {{x.ViTri}}, Số  : {{x.SoAo}}</div>
+          </a></td>
+        </tr>
+         
+  
+        </tbody>
+      </table>
+        <br />
+        <hr />    
+      Bàn thắng 
+      <table style="width:100%;" >
+          <tbody ng-repeat="x in ketqua.GhiBan">
+          <tr>
+            <td style="vertical-align: top;width:100%;"><a href = "danhsach.html?id={{x.id}}"> 
+                
+                <div class="tieude">Cầu thủ {{x.HoTen}} , {{x.ViTri}}, số : {{x.SoAo}}</div>
+                <div class="tieude">Thời điểm :  {{x.GhiBan}}</div>
+            </a></td>
+          </tr>
+           
+    
+          </tbody>
+        </table>
+
+        <br />
+        <hr />    
+      Vào sân
+      <table style="width:100%;" >
+          <tbody ng-repeat="x in ketqua.GhiBan">
+          <tr>
+            <td style="vertical-align: top;width:100%;"><a href = "danhsach.html?id={{x.id}}"> 
+                
+                <div class="tieude">Cầu thủ {{x.HoTen}} , {{x.ViTri}}, số : {{x.SoAo}}</div>
+                <div class="tieude">Thời điểm :  {{x.VaoSan}}</div>
+            </a></td>
+          </tr>
+           
+    
+          </tbody>
+        </table>
+
+        <br />
+        <hr />    
+      Ra sân
+      <table style="width:100%;" >
+          <tbody ng-repeat="x in ketqua.GhiBan">
+          <tr>
+            <td style="vertical-align: top;width:100%;"><a href = "danhsach.html?id={{x.id}}"> 
+                
+                <div class="tieude">Cầu thủ {{x.HoTen}} , {{x.ViTri}}, số : {{x.SoAo}}</div>
+                <div class="tieude">Thời điểm :  {{x.RaSan}}</div>
+            </a></td>
+          </tr>
+           
+    
+          </tbody>
+        </table>
+
+
+
+        <br />
+        <hr />    
+      Thẻ vàng
+      <table style="width:100%;" >
+          <tbody ng-repeat="x in ketqua.GhiBan">
+          <tr>
+            <td style="vertical-align: top;width:100%;"><a href = "danhsach.html?id={{x.id}}"> 
+                
+                <div class="tieude">Cầu thủ {{x.HoTen}} , {{x.ViTri}}, số : {{x.SoAo}}</div>
+                <div class="tieude">Thời điểm :  {{x.TheVang}}</div>
+            </a></td>
+          </tr>
+           
+    
+          </tbody>
+        </table>
+
+        
+  </section>
+      
+
+</body>
+</html>
+
+
+
+
+
+

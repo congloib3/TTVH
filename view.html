@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thể thao & Văn hóa">
+    <meta name="keywords" content="Thể thao,Văn hóa">
+    <meta name="author" content="TTVH">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+<style>
+
+</style>
+<link rel="stylesheet" href="css/ttvhview.css">
+<script src="jslib/vue.js"></script>
+<script src="jslib/vue-resource.min.js"></script>
+<script src="jslib/axios.min.js"></script>
+<script src="jslib/ase.js"></script>    
+
+
+
+</head>
+<body>
+
+
+    
+  <article class="article" id="aseArticle">
+	<div id="navbar">
+          {{article.tieude}}
+        </div>
+        <div class ="tieude" id="baiviet_tieude" ><h2>{{article.tieude}}</h2></div>
+        <div class="hangmuc" id="baiviet_hangmuc" style="color:red;padding:0 5px;">{{article.cat1}} | {{article.cat2}}</div>
+        <div class="ngay" id="baiviet_ngay" >{{article.ngay}}</div>
+        <div class ="mota" id="baiviet_mota" ><h4>{{article.mota}}</h4></div>
+        <div id="menuitem-detail">
+          <div id="menuitem">
+            <a style="margin-top: 60px;" href="index.html" onclick="menuViewclose();" target="_parent">Trang chủ</a>
+            <a href="index2.html"  target="_parent" onclick="menuViewclose();menuTTVHlink('baimoi.html','Bài mới');/*menuTTVHlable('Bài mới');*/">&nbsp;&nbsp;Bài mới</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('viet.html','Bóng đá Việt Nam');/*menuTTVHlable('Bóng đá Việt');*/">Bóng đá Việt Nam</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('anh.html','Bóng đá quốc tế');/*menuTTVHlable('Thể thao');*/">Bóng đá quốc tế</a>
+            <a href="index2.php" target="_parent" onclick="menuViewclose();menuTTVHlink('soikeo.php','Soi kèo');/*menuTTVHlable('Soi kèo');*/">Soi kèo</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('giaitri.html','Giải trí');/*menuTTVHlable('Giải trí');*/">Giải trí</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('vanhoa.html','Văn hóa');/*menuTTVHlable('Văn hóa');*/">Văn hóa</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('xahoi.html','Xã hội');/*menuTTVHlable('Xã hội');*/">Xã hội</a>
+            <a href="index2.html" target="_parent" onclick="menuViewclose();menuTTVHlink('sao.html','Thế giới sao');/*menuTTVHlable('Thế giới sao');*/">Thế giới sao</a>
+            
+          </div>
+        </div>
+        <div id="menu">
+            <a  href="javascript:void(0);" class="icon" onclick="menuView();" >
+                <i style="padding: 5px; color: white" class="fa fa-bars"></i>
+              </a>
+        </div>
+        <div id="menu1">
+          <a  href="javascript:void(0);" class="icon" onclick="menuViewclose();" >
+              <i style="padding: 5px; color: white" class="fa fa-bars"></i>
+            </a>
+      </div>
+        <div class ="noidung" id="baiviet_noidung" v-html="article.noidung"></div>
+	<div id="footer">
+           <table style="width: 100%;text-align: center;">
+          <tr>
+              <td style="width:25%">
+                  <button class="btn-back" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+              </td>
+            <td style="width:25%"><a href="index.html" target="_parent"><i class="fa fa-home" aria-hidden="true"></i></a></td>
+            <td style="width:25%"><a href="video.html" target="_parent"><i class="fa fa-video-camera" aria-hidden="true"></i></a></td>
+            <td style="width:25%"><a href="forum.html" target="_parent"><i class="fa fa-futbol-o" aria-hidden="true"></i></a></td>
+          </tr>          
+    	<tr style="font-size:11px">
+              <td>Quay lại</td>
+              <td>Trang chủ</td>
+              <td>Video</td>
+              <td>Big Bet</td>
+            </tr>
+          </table> 
+	</div>
+  </article>
+  
+  <script src="js/view.js"></script>
+<script>
+
+  </script>    
+</body>
+</html>
+
+
+
+
+
+

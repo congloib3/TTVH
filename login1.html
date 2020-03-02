@@ -1,0 +1,68 @@
+<!-- <?php include 'lib/login_lib.php';?>              
+<?php if($rsLogin!=0) 
+{
+?> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+  
+
+</head>
+<style>
+
+</style>
+<script src="jslib/vue.js"></script>
+<script src="jslib/vue-resource.min.js"></script>
+<script src="jslib/axios.min.js"></script>
+<script src="jslib/ase.js"></script>
+
+<body>
+
+  <div class="header">
+    <span><button onclick="goBack()"><i class="fa fa-angle-left" aria-hidden="true"></i></button></span>
+    <span style="margin-right: 25px;">Đăng nhập</span>
+  </div>
+
+  <div class="signup-form">
+      <div class="signup-form" id="aseLogin">
+        <form class="" action="index.html" method="post">
+          <div class="ttvh">THỂ THAO & VĂN HÓA</div>
+          <span style="color:#fff">ĐĂNG NHẬP TÀI KHOẢN</span>
+          <input class="txtb" type="text" placeholder="Tài khoản" name="uname" v-model="userLogin.userName" required
+          title="Phải nhập UserName" data-errormessage-value-missing="Phải có UserName"
+          oninvalid="this.setCustomValidity('Nhập User Name')" oninput="setCustomValidity('')" />
+          <input class="txtb" type="password" placeholder="Mật khẩu" name="psw" v-model="userLogin.password"
+                required data-errormessage-value-missing="Phải có password"
+                oninvalid="this.setCustomValidity('Nhập password, tối thiểu 6 ký tự')" />
+                <div id ="Msg" class="Msg"></div>
+                <div id ="Err" class="Err"></div>
+          <input type="button" value="ĐĂNG NHẬP" class="signup-btn" @click="doLogin1">
+          <div class="input-login">
+            Bạn chưa có tài khoản ? <a href="register.html">Đăng ký</a>
+          </div>
+        </form>
+      </div>
+          
+        </div>
+
+    
+</div>
+
+  <script>
+    function goBack() {
+  window.history.back();
+}
+  </script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

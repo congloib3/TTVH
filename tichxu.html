@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tích xu</title>
+</head>
+<style>
+    body {
+        background: #fff;
+    }
+
+    .header h1 {
+        text-align: center;
+        margin-top: 70px;
+        color: #a00000;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .section input {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        width: 70%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #a00000;
+        font-size: 16px;
+    }
+
+    .section select {
+        width: 70%;
+        padding: 10px;
+        border: 1px solid #a00000;
+        border-radius: 10px;
+        background: #fff;
+        font-size: 16px;
+    }
+
+    .section input[type=button] {
+        background: #a00000;
+        width: 30%;
+        color: white;
+    }
+
+    .back {
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .back button {
+        border-radius: 5px;
+        border: none;
+        padding: 5px 10px;
+        color: #a00000;
+        background-color: transparent;
+        outline: 0;
+
+    }
+</style>
+
+<body>
+    <div class="header">
+        <H1>TÍCH XU</H1>
+    </div>
+    <div class="section">
+        <select>
+            <option disabled value="">Vui lòng loại thẻ nạp</option>
+            <option>Viettel</option>
+            <option>Mobifone</option>
+            <option>Vinaphone</option>
+        </select>
+        <input type="text" placeholder="Mã thẻ">
+        <input type="text" placeholder="Mã Seri">
+        <select>
+            <option>-- Chọn mệnh giá --</option>
+            <option>10.000</option>
+            <option>20.000</option>
+            <option>50.000</option>
+        </select>
+        <input type="button" value="Nạp">
+    </div>
+    <div class="back">
+        <button onclick="goBack()"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Quay lại</button>
+    </div>
+</body>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+  <link rel="stylesheet" href="css/ttvh.css">
+
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+  <style>
+    marquee {
+    margin-top: 5px;
+    width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+
+  <section class="section" id="aselist">
+          <!-- <div style="vertical-align: top;width: 100%;" v-for="(x, index) in listHot" :key="x.id">
+            <a target="_parent" :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a>
+          </div>
+          
+             -->
+             <div class="slideshow">
+                <div class="slideshow__container js-slideshow":class="{ active: isActive(index) }" v-for="slide, index in listHot" >
+                    <a target="_parent" :href="'view.html?id='+slide.id">
+                  <div class="numbertext">{{index+1}} / 2</div>
+                  <img
+                    :key="slide.id"
+                    :src="slide.img"
+                    :alt="slide.title"
+                  />
+                  <div class="text">{{slide.tieude}}</div>
+                  </a>
+                </div>
+              </div>
+              <div class="goiy" >
+                      <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                              <i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+                              <a target="_parent" :href="'view.html?id='+x.id" class="icon" id="icon-star" v-for="(x, index) in hot" :key="x.id" >
+                                  {{x.tieude}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               </a>
+                      </marquee>                  
+             </div>
+              <!-- <br> -->
+              
+              <!-- <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+              </div>   -->
+
+        <!-- <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr> -->
+
+    <div class="category">
+        ĐỌC BÁO
+      </div>
+    <table v-for="(x, index) in hot" :key="x.id">
+      <tbody class="content">
+        <tr style="height:67.5px;">
+          <td style="max-width:40%;vertical-align: top;"> <a target="_parent" :href="'view.html?id='+x.id"> <img
+                :src="x.img" alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href="'view.html?id='+x.id">
+              <div class="motadetail">{{x.tieude}}</div>
+              <div class="socials-share">
+                <span class="ngay">{{x.ngay}}</span>
+                <!-- <span class="cat">{{x.cat1.toUpperCase()}}</span> -->
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div class="chuyenmuc">
+      <a href="index2.html" target="_parent"
+        onclick="menuTTVHlink('viet.html','Bóng đá Việt Nam');menuTTVHlable('Bóng đá Việt');">BÓNG ĐÁ VIỆT</a>
+    </div> -->
+    <div class="category">
+        XE PASSION
+      </div>
+    <table v-for="(x, index) in list" :key="x.id">
+      <tbody class="content">
+        <tr style="height:67.5px;">
+          <td style="max-width:40%;vertical-align: top;"> <a target="_parent" :href="'view.html?id='+x.id"> <img
+                :src="x.img" alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href="'view.html?id='+x.id">
+              <div class="motadetail">{{x.tieude}}</div>
+              <div class="socials-share">
+                <span class="ngay">{{x.ngay}}</span>
+                <!-- <span class="cat">{{x.cat1.toUpperCase()}}</span> -->
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="category">
+        <a href="index2.html" target="_parent"
+        onclick="menuTTVHlink('anh.html','Bóng đá quốc tế');menuTTVHlable('Thể thao');">BÓNG ĐÁ ANH</a>
+      </div>
+    <table v-for="(x, index) in lista" :key="x.id">
+      <tbody class="content">
+        <tr style="height:67.5px;">
+          <td style="max-width:40%;vertical-align: top;"> <a target="_parent" :href="'view.html?id='+x.id"> <img
+                :src="x.img" alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href="'view.html?id='+x.id">
+              <div class="motadetail">{{x.tieude}}</div>
+              <div class="socials-share">
+                <span class="ngay">{{x.ngay}}</span>
+                <!-- <span class="cat">{{x.cat1.toUpperCase()}}</span> -->
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="category">
+        <a href="index2.html" target="_parent"
+        onclick="menuTTVHlink('vanhoa.html','Văn hóa');menuTTVHlable('Văn hóa');">VĂN HÓA</a>
+      </div>
+      
+    <table v-for="(x, index) in listvh" :key="x.id">
+      <tbody class="content">
+        <tr style="height:67.5px;">
+          <td style="max-width:40%;vertical-align: top;"> <a target="_parent" :href="'view.html?id='+x.id"> <img
+                :src="x.img" alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href="'view.html?id='+x.id">
+              <div class="motadetail">{{x.tieude}}</div>
+              <div class="socials-share">
+                <span class="ngay">{{x.ngay}}</span>
+                <!-- <span class="cat">{{x.cat1.toUpperCase()}}</span> -->
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="category">
+        <a href="index2.html" target="_parent"
+        onclick="menuTTVHlink('giaitri.html','Giải trí');menuTTVHlable('Giải trí');">GIẢI TRÍ</a>
+      </div>
+      
+    <table v-for="(x, index) in listgt" :key="x.id">
+      <tbody class="content">
+        <tr style="height:67.5px;">
+          <td style="max-width:40%;vertical-align: top;"> <a target="_parent" :href="'view.html?id='+x.id"> <img
+                :src="x.img" alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;padding-left:5px;"><a target="_parent" :href="'view.html?id='+x.id">
+              <div class="motadetail">{{x.tieude}}</div>
+              <div class="socials-share">
+                <span class="ngay">{{x.ngay}}</span>
+                <!-- <span class="cat">{{x.cat1.toUpperCase()}}</span> -->
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="width:100%;border-bottom: solid 8px #f8f7f5">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+</body>
+<script src="js/list.js"></script>
+<script>
+  function menuTTVHlink(link, label) {
+    localStorage.setItem("storageName", link);
+    //document.getElementById("Nav3").innerHTML="";
+  }
+  function menuTTVHlable(label) {
+    localStorage.setItem("label", label);
+    //document.getElementById("Nav3").innerHTML="";
+  } 
+</script>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+  <link rel="stylesheet" href="css/bigbet.css">
+
+  <script src="js/ttvh.js"></script>
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+  <script src="js/moment.js"></script>
+
+
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+  <style>
+    
+  </style>
+  <nav>
+
+  </nav>
+  <section class="section" id="aselist">
+      <div class="header">
+          <div class="logo">
+              <a href="index.html"><img src="./img/unnamed.jpg" width="30%" alt=""></a>
+              <img src="./img/logo-bigbet-final.png" width="70%" alt="">
+          </div>
+          <div class="icon-bar">
+            <a class="active" href="#" @click="getTuanNay" id="a1Menu">Tuần này</a>
+            <a class="normal" href="#" @click="getThangNay" id="a2Menu">Tháng này</a>
+            <a class="normal" href="#" @click="getNamNay" id="a3Menu">Năm nay</a>
+          </div>
+      </div>
+    <div class="content">
+        
+        <table v-for="(item, index) in list" :key="item.id">
+          <thead>
+            <tr>
+              <th colspan="5">{{item.giaiDau}}</th>
+            </tr>
+            <tr>
+              <td style="width: 25%">Ngày</td>
+              <td colspan="3" style="width: 45%;margin: 0 5px;">Trận</td>
+              <td style="width: 30%">Loại trận</td>
+            </tr>
+          </thead>
+          <!-- <tfoot>
+            <tr>
+              <td colspan="3">
+                <hr />
+              </td>
+            </tr>
+          </tfoot> -->
+          <tbody>
+            <tr v-for="(x, idx) in item.lichThiDau" :key="x.id">
+              <td>{{formatDay(x.ngay)}}</td>
+              <td style="width:10%">
+                <div class="logo-doi1">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png"  alt="">
+                </div>
+              </td>
+              <td style="width:30%"><a target="_parent" :href="`dudoan.html?id=${x.id}`">
+                  {{x.tranDau}}</a>
+              </td>
+              <td style="width:10%">
+                  <div class="logo-doi2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/1280px-Flag_of_Thailand.svg.png"  alt="">
+                  </div>
+                </td>
+              <td>
+                  {{(x.vong)}}
+              </td>
+            </tr>
+    
+          </tbody>
+        </table>
+        
+            
+    </div>
+    <div class="footer">
+        <table style="border: none;font-size: 14px;text-align: center">
+          <tr>
+            <td style="width:20%"><button class="btn-back" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></td>
+            <td style="width:40%;text-align: right;"><a href="bxh.html"> Bảng xếp hạng</a></td>
+            <td style="width:40%;text-align: right;">
+              <a :href="userInfo.name==='Đăng nhập'?'login.html':'thanhvien.html'"><i class="fa fa-user" aria-hidden="true"></i> {{userInfo.name}} <br /></a>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </section>
+</body>
+<script src="js/bigbet.js"></script>
+<script>
+    function goBack() {
+  window.history.back();
+}
+  </script>
+</html>

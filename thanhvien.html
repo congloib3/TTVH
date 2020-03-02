@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thông tin thành viên</title>
+    <link rel="stylesheet" href="css/thanhvien.css">
+    <script src="jslib/vue.js"></script>
+    <script src="jslib/vue-resource.min.js"></script>
+    <script src="jslib/axios.min.js"></script>
+    <script src="jslib/ase.js"></script>
+</head>
+
+<body>
+    <header class="header" id="headerTTVH">
+        <div class="menu">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tài khoản
+            <a href="" class="icon" id="icon-star">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <section class="section" id="aselist">
+
+        <div class="user">
+                <a :href="userInfo.name==='Đăng nhập'?link='login.html':link='thanhvien.html'"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;{{userInfo.name}}</a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <span><i class="fa fa-history icon-1" aria-hidden="true"></i></span>
+                    <span><a :href="userInfo.name==='Đăng nhập'?link='login.html':link='lichsu.html'">Lịch sử</a></span>
+                    <span class="more"><a :href="userInfo.name==='Đăng nhập'?link='login.html':link='thanhvien.html'"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-info-circle icon-1" aria-hidden="true"></i>
+                    </span>
+                    <span><a :href="userInfo.name==='Đăng nhập'?'login.html':'info.html?id='+userInfo.id">Thông tin cá nhân</a></span>
+                    <span class="more"><a :href="userInfo.name==='Đăng nhập'?'login.html':'info.html?id='+userInfo.id"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-question-circle icon-1" aria-hidden="true"></i></i></span>
+                    <span><a href="">Điều khoản sử dụng</a></span>
+                    <span class="more"><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-ticket icon-1" aria-hidden="true"></i></span>
+                    <span><a :href="userInfo.name==='Đăng nhập'?link='login.html':link=''">Voucher</a></span>
+                    <span class="more"><a :href="userInfo.name==='Đăng nhập'?link='login.html':link=''"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-credit-card-alt icon-1" aria-hidden="true"></i>
+                    </span>
+                    <span><a :href="userInfo.name==='Đăng nhập'?link='login.html':link=''">Thanh toán</a></span>
+                    <span class="more"><a :href="userInfo.name==='Đăng nhập'?link='login.html':link=''"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-envelope-o icon-1" aria-hidden="true"></i>
+                    </span>
+                    <span><a href="">Gửi email góp ý</a></span>
+                    <span class="more"><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fa fa-cogs icon-1" aria-hidden="true"></i>
+                    </span>
+                    <span><a href="">Cài đặt</a></span>
+                    <span class="more"><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span>
+                </td>
+            </tr>
+            </table>
+            <div class="back">
+                    <button onclick="goBack()"> Quay lại</button>
+                </div>
+    </section>
+</body>
+<script>
+        function goBack() {
+            window.history.back();
+        }
+        new Vue({
+         el: ".section",
+        data: {
+            users: [],
+            userInfo: userInfo,
+            link:''
+        }
+    })
+    </script>
+</html>

@@ -1,0 +1,24 @@
+[{
+    "id":"179325",
+    "tran":"Thái Lan - Indo",
+    "winlose":[
+        {"dt":"Thái Lan","dd":"Indo","idkeo":127,"chap":"1.5","wl":[
+            {"kq":"Thái Lan","tyle":0.98,"cuoc":0,"tong":0},
+            {"kq":"Indo","tyle":0.97,"cuoc":0,"tong":0}
+        ]},
+        {"dt":"Thái Lan","dd":"Indo","idkeo":128,"chap":"2.0","wl":[
+            {"kq":"Thái Lan","tyle":2,"cuoc":0,"tong":0},
+            {"kq":"Indo","tyle":0.96,"cuoc":0,"tong":0}
+        ]}
+    ],
+    "kqhoa":"Hòa",
+    "tylehoa":1.5,
+    "cuochoa":0,
+    "tonghoa":0,
+    "tranDauId":"179325",
+    "logo1":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/thai_lan_png.jpg",
+    "logo2":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/tai_xuong(1).png"
+}
+]
+    
+        

@@ -1,0 +1,24 @@
+[{
+    "id":"189125",
+    "tran":"Singapore - Laos",
+    "winlose":[
+        {"dt":"Singapore","dd":"Laos","idkeo":125,"chap":1.5,"wl":[
+            {"kq":"Singapore","tyle":0.98,"cuoc":0,"tong":0},
+            {"kq":"Arsenal","tyle":1,"cuoc":0,"tong":0}
+        ]},
+        {"dt":"Singapore","dd":"Laos","idkeo":126,"chap":"2.0","wl":[
+            {"kq":"Singapore","tyle":1.5,"cuoc":0,"tong":0},
+            {"kq":"Arsenal","tyle":0.96,"cuoc":0,"tong":0}
+        ]}
+    ],
+    "kqhoa":"Hòa",
+    "tylehoa":1,
+    "cuochoa":0,
+    "tonghoa":0,
+    "tranDauId":"189125",
+    "logo1":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/singapore.png",
+    "logo2":"http://media.bizwebmedia.net/sites/71097/data/Upload/2016/3/laos.png"
+}
+]
+    
+    

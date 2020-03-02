@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+  <link rel="stylesheet" href="css/dudoan.css">
+
+  <script src="js/ttvh.js"></script>
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+
+
+</head>
+
+<body>
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+
+  <section class="section" id="aselist">
+    <!-- <div class="header">
+          <div class="logo">
+              <a href="index.html"><img src="./img/unnamed.jpg" width="30%" alt=""></a>
+              <img src="./img/logo-bigbet-final.png" width="70%" alt="">
+          </div>
+    </div> -->
+    <div class="header">
+      <div class="back">
+
+        <button onclick="goBack()"> <i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+      </div>
+      <div class="user">
+        <a :href="userInfo.name==='Đăng nhập'?'login.html':'thanhvien.html'"><i class="fa fa-user"
+            aria-hidden="true"></i>
+          Người chơi : {{userInfo.name}}</a>
+      </div>
+    </div>
+    <div class="game" v-for="(y, index) in article ">
+      <img :src="y.logo1" width="25px" alt=""> {{info.tranDau}} <img :src="y.logo2" width="25px" alt="">
+    </div>
+    <div class="league">
+      ({{info.giaiDau}} {{info.vong}})
+    </div>
+
+
+    <table v-for="(item, index) in article" :key="item.id" class="winlose">
+      <thead>
+        <tr>
+          <td colspan="4" style="background: #a00000;border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          color: white;
+          font-size: 16px;">
+            Dự đoán theo thắng thua
+          </td>
+        </tr>
+        <!-- <tr>
+              <td colspan="5">
+                <span style="color:darkgoldenrod">{{item.doitren}} {{item.chap}}</span> - <span :style="[item.chap===''?{'color':'darkgoldenrod'}:{'color':'white'}]">{{item.doiduoi}}</span>
+                {{item.tran}}
+              </td>
+            </tr> -->
+        <tr>
+          <!-- <td style="width:15%;">TT</td> -->
+          <td style="width:25%;border: none"> </td>
+          <td style="width:25%;">Tỷ lệ</td>
+          <td style="width:25%;">Đặt</td>
+          <td style="width:25%;">Tạm tính</td>
+        </tr>
+      </thead>
+      <tbody v-for="(x, idx) in item.winlose">
+        <tr v-for="(y, index) in article ">
+          <!-- <td>{{ index }}</td> -->
+          <!-- <td colspan="1" style="width: 40%;color: white">Kèo</td> -->
+          <th colspan="5">
+            <span style="color:red"><em> <img :src="y.logo1" width="18px" alt="">&nbsp&nbsp{{x.dt}}
+                {{x.chap}}</em></span>
+            -
+            <span :style="[x.chap===''?{'color':'red'}:{'color':'black'}]"><em>{{x.dd}}&nbsp&nbsp<img :src="y.logo2"
+                  width="18px" alt=""></em></span>
+          </th>
+        </tr>
+        <tr v-for="y in x.wl">
+          <td style="width: 25%">
+            {{y.kq}}
+          </td>
+          <td style="width: 25%">
+            {{y.tyle}}
+          </td>
+          <td style="padding: 0 5px;width: 25%"><input type="number" onfocus="this.value=''" v-model="y.cuoc"
+              class="cuoc" size='8' min="0" max="987654321" />
+          </td>
+          <td style="width: 25%">
+            {{getScore(y.tong=y.cuoc*y.tyle)}}
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5"><em>HÒA</em></th>
+        </tr>
+        <tr>
+          <td>
+            {{item.kqhoa}}
+          </td>
+          <td>
+            {{item.tylehoa}}
+          </td>
+          <td style="padding: 0 5px;"><input type="number" onfocus="this.value=''" v-model="item.cuochoa" class="cuoc"
+              size='8' min="0" max="987654321" />
+          </td>
+          <td>
+            {{getScore(item.tonghoa=item.cuochoa*item.tylehoa)}}
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="submit">
+      <a href="#" v-on="{click:userInfo.name==='Đăng nhập'?alert:saveData}"><button type="button" class="save">Dự đoán
+        </button></a>
+    </div>
+    <table class="dudoan">
+      <thead>
+        <tr>
+          <td colspan="5" style="background: #a00000;border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          color: white;
+          font-size: 16px;">
+            Dự đoán theo tỷ số
+          </td>
+        </tr>
+        <tr>
+          <!-- <td style="width:15%;">TT</td> -->
+          <td style="width:25%;">Tỷ số</td>
+          <td style="width:25%;">Tỷ lệ</td>
+          <td style="width:20%;">Đặt</td>
+          <td style="width:30%;">Tạm tính</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item, index) in list" :key="item.id">
+          <!-- <td>{{ index }}</td> -->
+          <td style="border-bottom-right-radius: 0">{{item.ten}}</td>
+          <td style="border-radius: 0">{{item.tyLe}}</td>
+          <td style="padding: 0 5px;border-radius: 0"><input type="number" onfocus="this.value=''" v-model="item.cuoc" class="cuoc"
+              size='8' min="0" max="987654321" /></td>
+          <td >
+            {{item.tong=item.cuoc*item.tyLe}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="submit">
+      <a href="#" v-on="{click:userInfo.name==='Đăng nhập'?alert:saveData}"><button type="button" class="save">Dự đoán
+        </button></a>
+    </div>
+
+  </section>
+</body>
+<script src="js/dudoan.js"></script>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</html>

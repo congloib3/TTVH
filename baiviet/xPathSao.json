@@ -1,0 +1,22 @@
+﻿{
+	'cat1'   : 'Bóng đá Anh',
+	'cat2'   : 'Man United',
+	'url'    : 'https://thethaovanhoa.vn/the-gioi-sao-585ct0.htm',
+	'tieude' : '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/h3/a',
+	'link'   : '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/h3/a/@href',
+	'a_title': '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/h3/a/@title',
+	'mota'   : '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/div[2]/p',
+	'ngay': '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/div[2]/div',
+	'img'    : '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/a/img/@src',
+	'alt'    : '//*[@id="aspnetForm"]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/ul/li[555]/a/img/@alt',
+
+
+	'noidung': '//*[@id="divend"]',
+	'tacgia' : '//*[@id="divend"]/div[6]/strong',
+	
+	'test'	 :'test', 
+	'note'	 : 'tác giả ????' 	
+			
+}
+
+

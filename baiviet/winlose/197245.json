@@ -1,0 +1,23 @@
+[{
+    "id":"197245",
+    "tran":"MU - Arsenal",
+    "winlose":[
+        {"dt":"MU","dd":"Arsenal","idkeo":123,"chap":1.5,"wl":[
+            {"kq":"MU","tyle":1,"cuoc":0,"tong":0},
+            {"kq":"Arsenal","tyle":1,"cuoc":0,"tong":0}
+        ]},
+        {"dt":"MU","dd":"Arsenal","idkeo":124,"chap":"2.0","wl":[
+            {"kq":"MU","tyle":1.5,"cuoc":0,"tong":0},
+            {"kq":"Arsenal","tyle":0.96,"cuoc":0,"tong":0}
+        ]}
+    ],
+    "kqhoa":"Hòa",
+    "tylehoa":1,
+    "cuochoa":0,
+    "tonghoa":0,
+    "tranDauId":"197245",
+    "logo1":"https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+    "logo2":"https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png"
+}
+]
+    

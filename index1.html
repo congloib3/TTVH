@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Thể thao & Văn hóa">
+  <meta name="keywords" content="Thể thao,Văn hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+  <link rel="stylesheet" href="css/ttvh.css">
+  <script src="jslib/vue.js"></script>
+  <script src="js/ttvh.js"></script>
+  <script src="jslib/ase.js"></script>
+</head>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+</style>
+<body>
+  <header class="header" id="headerTTVH">
+    <div id="menu">
+      <a href="javascript:void(0);" class="icon" onclick="topFunction()">
+        <i style="padding: 7px; color: white" class="fa fa-arrow-up" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="menu">
+      <!-- <div id="searchform-wrap">
+        <input type="text" name="s" id="search_keyword" placeholder="Nội dung cần tìm...">
+      </div>
+      <button id="btn-search" onclick="seacrhTTVH()"><i class="fa fa-search" aria-hidden="true"></i>
+      </button> -->
+      <a href="index1.html" target="_parent" onclick="menuTTVHclose();menuTTVHlink('baimoi.html','Bài mới');"
+        class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thể thao & Văn hóa</a>
+      <a href="javascript:void(0);" style="display: block;" class="icon" id="icon-star" onclick="menuTTVH()">
+        <i class="fa fa-bars"></i>
+
+      </a>
+      <div id="menuItem">
+
+        <a :href="userInfo.name=='Đăng nhập'?'login1.html':'thanhvien.html'" onclick="menuTTVHclose();" target="_parent"><i
+            class="fas fa-user-circle iconAccount"></i>{{userInfo.name}}</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuTTVHclose()"><i class="fa fa-times"
+            aria-hidden="true"></i></a>
+        <hr noshade="noshade" />
+        <a href="index.html" onclick="menuViewclose();" target="_parent"><i
+           class="fa fa-home iconItem"></i>&nbsp;&nbsp;Trang chủ</a>
+        <a href="baimoi.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('baimoi.html','Bài mới');"><i
+            class="fa fa-newspaper-o iconItem"></i>&nbsp;&nbsp;Bài mới</a>
+        <a href="viet.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('viet.html','Bóng đá Việt');"><i
+            class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Bóng đá Việt</a>
+        <a href="anh.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('anh.html','Thể thao');"><i
+            class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Thể thao</a>
+        <a href="soikeo.php" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('soikeo.php','Soi kèo');"><i
+            class="fa fa-user-secret iconItem"></i>&nbsp;&nbsp;Soi kèo</a>
+        <hr noshade="noshade" />
+        <a href="giaitri.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('giaitri.html','Giải trí');"><i
+            class="fa fa-headphones iconItem"></i>&nbsp;&nbsp;Giải trí</a>
+        <a href="vanhoa.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('vanhoa.html','Văn hóa');"><i
+            class="fa fa-globe iconItem"></i>&nbsp;&nbsp;Văn hóa</a>
+        <a href="xahoi.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('xahoi.html','Xã hội');"><i
+            class="fa fa-users iconItem"></i>&nbsp;&nbsp;Xã hội</a>
+        <a href="sao.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('sao.html','Thế giới sao');"><i
+            class="fa fa-star iconItem"></i>&nbsp;&nbsp;Thế giới sao</a>
+        <hr />
+        <a href="video.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('video.html','Video');"><i
+            class="fas fa-video iconItem"></i>&nbsp;&nbsp;Video clip</a>
+        <a href="youtube.html" target="ifTTVH"><i class="fab fa-youtube iconItem"></i>&nbsp;&nbsp;Kênh TT&VH</a>
+        <!-- <a href="" target="ifTTVH" onclick="menuTTVHclose();" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Đánh giá</a>  -->
+        <!--<a href="" target="ifTTVH" onclick="menuTTVHclose();" ><i class="fas fa-comment-alt iconItem"></i>&nbsp;&nbsp;Góp ý</a>-->
+        <!-- <a href="quangcao.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('quangcao.html','Test Quảng cáo');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Test Quảng cáo</a>
+                  <a href="adsvanhoa.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('adsvanhoa.html','QC Chuyên mục');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;QC Chuyên mục</a>
+                  <a href="adsview.html?id=9876543210" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('adsview.html?id=9876543210','QC Tin bài');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;QC Tin bài</a> -->
+        <!--a href="test.html" target="ifTTVH" onclick="menuTTVHclose();menuTTVHlink('test.html','Test');" ><i class="fas fa-futbol iconItem"></i>&nbsp;&nbsp;Test</a-->
+      </div>
+
+    </div>
+
+
+  </header>
+  <nav class="topnav" id="navTTVH">
+    <div class="list">
+      <a style="width:50%" href="baimoi.html" onclick="navTTVH(this);" target="ifTTVH" class="navItemActive"
+        id="Nav3">Bài mới</a>
+      <!-- <a style="width:25%;" href="baimoi.html" onclick="navTTVH(this);" target="ifTTVH" class="navItem" id="Nav1">Bài Mới</a> -->
+      <a style="width:50%;" href="forum.html" onclick="navTTVH(this);" target="_parent" class="navItem" id="Nav2">BigBet
+        Award</a>
+      <!-- <a style="width:25%;
+          background-image: url('/img/logo-bigbet-final.png');
+          background-size: cover;
+          margin-top: -2px;
+          " href="forum.html" onclick="navTTVH(this);" target="_parent" id="Nav2" class="navItem">&nbsp;</a>
+          <a style="width:25%;
+          -webkit-mask-box-image: url('/img/logoxewhite-1024x423.png');
+           background-color: #a00000;"
+            href="https://xepassion.thethaovanhoa.vn/" onclick="navTTVH(this);" target="_parent" id="Nav2" class="navItem">&nbsp;</a> -->
+
+    </div>
+  </nav>
+
+  <section class="section">
+    <style>
+      iframe {
+        height: max-content;
+      }
+    </style>
+
+    <iframe src="baimoi.html?cachebust=2" allowfullscreen
+      style="border:none;width:100%;min-height:300px;overflow: hidden;" scrolling="no"
+      sandbox="allow-same-origin allow-scripts allow-forms allow-modals allow-popups allow-top-navigation"
+      allowtransparency="true"
+      onload="this.style.height=this.contentDocument.body.scrollHeight +'px';  window.setInterval('autoresize_frames()', 1000); "
+      onchange="this.style.height=this.contentDocument.body.scrollHeight +'px';" name="ifTTVH" id="ifTTVH">
+
+    </iframe>
+
+  </section>
+  <script src="js/index.js">
+  </script>
+</body>
+
+</html>

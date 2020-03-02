@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Th? thao & Van hóa">
+  <meta name="keywords" content="Th? thao,Van hóa">
+  <meta name="author" content="TTVH">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+    integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+  <link rel="stylesheet" href="css/ttvh.css">
+
+  <script src="jslib/vue.js"></script>
+  <script src="jslib/vue-resource.min.js"></script>
+  <script src="jslib/axios.min.js"></script>
+  <script src="jslib/ase.js"></script>
+
+</head>
+
+<body>
+
+  <div id="Msg" class="Msg"></div>
+  <div id="Err" class="Err"></div>
+
+
+  <section class="section" id="aselist">
+    <div class="ads" id="adTop">
+      <!-- A Group Asynchronous JS Tag - Generated with A Group Asynchronous -->
+      <ins data-revive-zoneid="1" data-revive-id="56ff27b28101f9f6e1f662b3b19a4e44"></ins>
+      <script async src="//www.agroupadx.com/www/delivery/asyncjs.php"></script>
+
+      <!-- A Group Asynchronous JS Tag - Generated with A Group Asynchronous -->
+      <ins data-revive-zoneid="2" data-revive-id="56ff27b28101f9f6e1f662b3b19a4e44"></ins>
+      <script async src="//www.agroupadx.com/www/delivery/asyncjs.php"></script>
+
+      <!--
+MobileAds Ad Tag
+Campaign: CX5 300x250 01_2019
+DSP: Direct
+Ad Tag Type: Javascript
+Ad Format: Embedded
+-->
+      <script type='text/javascript'>
+        var rma = {
+          'campaignId': 'bb229ec55c5900b4ef53185785cb2060',
+          'ifViewability': true,
+          'tags': {
+            'dsp': 'Direct',
+            'exchange': 'Direct',
+            'inventory': '{{rmaDomain}}'
+          }
+        };
+      </script>
+      <img src='https://www.cdn.serving1.net/t?i=bb229ec55c5900b4ef53185785cb2060&dsp=Direct&customId=noblock'
+        width='1px' height='1px' style='display:none' />
+      <script type='text/javascript' src='https://cdn.serving1.net/general.js'></script>
+
+      <!--
+MobileAds Ad Tag
+Campaign: 20181023_Kia_Morning_IBV_300x250
+DSP: Direct
+Ad Tag Type: Javascript
+Ad Format: Embedded
+-->
+      <script type='text/javascript'>
+        var rma = {
+          'campaignId': '240eca3a3d2bd5443cb1dddb2c33d5a9',
+          'ifViewability': true,
+          'tags': {
+            'dsp': 'Direct',
+            'exchange': 'Direct',
+            'inventory': '{{rmaDomain}}'
+          }
+        };
+      </script>
+      <img src='https://www.cdn.serving1.net/t?i=240eca3a3d2bd5443cb1dddb2c33d5a9&dsp=Direct&customId=noblock'
+        width='1px' height='1px' style='display:none'
+        onerror="this.onerror=null;this.src='https://track.richmediaads.com/t?i=240eca3a3d2bd5443cb1dddb2c33d5a9&dsp=Direct&customId=adblock';" />
+      <script type='text/javascript' src='https://cdn.serving1.net/general.js'></script>
+    </div>
+
+
+    <table class="hot">
+      <tbody v-for="(x, index) in listHot" :key="x.id">
+        <tr>
+          <td style="vertical-align: top;">
+            <a :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a>
+            <a :href="'view.html?id='+x.id">
+              <div class="tieude">{{x.tieude}}</script>
+              </div>
+              <div class="ngay">{{x.ngay}}</div>
+              </div>
+            </a></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="'view.html?id='+x.id">
+              <div class="mota"> {{x.mota}} </div>
+              <div class="socials-share">
+                <a class="bg-facebook"
+                  :href="'https://www.facebook.com/sharer/sharer.php?u=http://tours.tabalohostel.com/ttvh/view.html?id='+x.id"
+                  target="_blank">
+                  <i class="fas fa-share"></i>
+                </a>
+              </div>
+              <br />
+            </a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table>
+      <tbody v-for="(x, index) in list" :key="x.id">
+        <tr>
+          <td style="max-width:40%"> <a :href="'view.html?id='+x.id"> <img :src="x.img" :alt="x.alt" /> </a> </td>
+          <td style="vertical-align: top;"><a :href="'view.html?id='+x.id">
+              <div class="tieude">{{x.tieude}}</script>
+              </div>
+              <div style="width:100%;padding-top:0;">
+                <div class="ngay">{{x.ngay}}</div>
+                <div class="socials-share">
+                  <a class="bg-facebook"
+                    :href="'https://www.facebook.com/sharer/sharer.php?u=http://tours.tabalohostel.com/ttvh/view.html?id='+x.id"
+                    target="_blank">
+                    <i class="fas fa-share"></i>
+                </div>
+              </div>
+            </a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="js/list.js"></script>
+  <script src="js/ttvh.js"></script>
+</body>
+
+</html>
